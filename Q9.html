@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Reverse Name</title>
+  </head>
+  <body>
+    <input type="text" id="firstName" placeholder="First Name" />
+    <br /><br />
+    <input type="text" id="lastName" placeholder="Last Name" />
+    <br /><br />
+    <button onclick="swapName()">Show Reverse</button>
+    <h3 id="result"></h3>
+    <script>
+      function swapName() {
+        var fName = document.getElementById("firstName").value;
+        var lName = document.getElementById("lastName").value;
+        var fullName = lName + " " + fName;
+        document.getElementById("result").innerHTML = "Result: " + fullName;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dynamic Menu Example</title>
+    <style>
+      .submenu {
+        display: none;
+      }
+
+      .menu {
+        cursor: pointer;
+        background: lightblue;
+        padding: 10px;
+        width: 150px;
+      }
+
+      .submenu a {
+        display: block;
+        padding: 8px;
+        background: lightgray;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu" onclick="toggleMenu()">Click Me ▼</div>
+
+    <div id="submenu" class="submenu">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("submenu");
+
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

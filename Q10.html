@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Highlight Words</title>
+  </head>
+  <body>
+    <p id="myParagraph">
+      This is a sentence containing extremely beautiful and complicated words
+      like hippopotamus.
+    </p>
+
+    <button onclick="highlight()">Highlight Long Words</button>
+
+    <script>
+      function highlight() {
+        var p = document.getElementById("myParagraph");
+        var text = p.innerText;
+        var words = text.split(" ");
+
+        for (var i = 0; i < words.length; i++) {
+          if (words[i].length > 8) {
+            words[i] =
+              "<span style='background-color: red'>" + words[i] + "</span>";
+          }
+        }
+        p.innerHTML = words.join(" ");
+      }
+
+      //   window.onload = function () {
+      //     highlight();
+      //   };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Word Highlighter</title>
+  </head>
+  <body>
+    <h1>Word Highlighter</h1>
+    <p id="paragraph">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
+      tenetur esse velit expedita dolor mollitia libero explicabo, quam porro
+      tempora perferendis qui suscipit tempore temporibus hic voluptatem!
+      Eligendi, ad corrupti?
+    </p>
+    <button onclick="highlightLongWords()">
+      Highlight Words Over 8 Characters
+    </button>
+    <script>
+      function highlightLongWords() {
+        // Get paragraph text
+        const paragraph = document.getElementById("paragraph");
+        const text = paragraph.innerText;
+        // Split the text into words by space
+        const words = text.split(" ");
+        // Process each word
+        const highlightedText = words
+          .map((word) => {
+            if (word.length > 8) {
+              return `<mark style="background: red">${word}</mark>`;
+            }
+            return word;
+          })
+          .join(" ");
+        // Display the result
+        paragraph.innerHTML = highlightedText;
+      }
+      // Automatically highlight on page load
+      window.onload = function () {
+        //
+        highlightLongWords();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calc</title>
+    <link rel="stylesheet" href="css/Q1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Basic Arithmetic Functions</h1>
+      <input type="number" id="operand1" placeholder="Operand" />
+      <input type="number" id="operand2" placeholder="Operand" />
+      <div class="btn-row">
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('subtract')">Sub</button>
+        <button onclick="calculate('multiply')">Mul</button>
+      </div>
+      <div class="btn-row">
+        <button onclick="calculate('divide')">Div</button>
+        <button onclick="calculate('modulo')">Mod</button>
+      </div>
+      <h3>Result:</h3>
+      <input type="text" id="result" readonly />
+    </div>
+    <script src="js/Q1.js"></script>
+  </body>
+</html>

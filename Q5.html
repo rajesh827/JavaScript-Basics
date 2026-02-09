@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Image Description Change</title>
+    <style>
+      img {
+        width: 200px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://picsum.photos/200/300"
+      alt="Sample Image"
+      onmouseover="changeDescription()"
+      onmouseout="resetDescription()"
+    />
+    <p id="description">This is a sample image description.</p>
+    <script>
+      function changeDescription() {
+        document.getElementById("description").textContent =
+          "You are hovering over the image!";
+      }
+      function resetDescription() {
+        document.getElementById("description").textContent =
+          "This is a sample image description.";
+      }
+    </script>
+  </body>
+</html
