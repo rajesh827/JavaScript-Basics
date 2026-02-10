@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Dialog box</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        margin: 5px;
+        padding: 9px 15px;
+        font-size: 16px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        A dialog box in JavaScript is a pop-up window that allows you to interact with the user.
+        It's commonly used for showing messages, asking for confirmation, and taking input.
+
+        JavaScript provides three types of dialog boxes:
+        1. alert(): Displays a message and an OK button.
+        2. confirm(): Displays a message with OK and Cancel buttons, returning true or false.
+        3. prompt(): Displays a message with an input field and OK/Cancel buttons, returning the input or null.
+    </pre>
+    <pre>
+        <b>Example:</b>
+    </pre>
+    <button onclick="showMessage()">Show Message</button>
+    <button onclick="confirmUser()">Confirm Delete</button>
+    <button onclick="inputName()">Input Name</button>
+    <script>
+      function showMessage() {
+        alert("This is your message");
+      }
+
+      function confirmUser() {
+        let isConfirmed = confirm("Are your Sure to delete?");
+        isConfirmed ? alert("Deleted") : alert("Cancelled");
+      }
+
+      function inputName() {
+        let name = prompt("Enter your name:");
+        name ? alert(`Your name is ${name}`) : alert("Empty");
+      }
+    </script>
+  </body>
+</html>

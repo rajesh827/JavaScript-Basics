@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form onsubmit="return validateForm();">
+      <h3>User Registration</h3>
+
+      <label>Username:</label>
+      <input type="text" id="username" placeholder="Enter Username" />
+      <br /><br />
+
+      <label>Age (8-60):</label>
+      <input type="number" id="age" placeholder="Enter Age" />
+      <br /><br />
+
+      <label>Password:</label>
+      <input
+        type="text"
+        id="password"
+        placeholder="Min 6 chars, start w/ letter, end w/ digit"
+      />
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="js/Q18.js"></script>
+  </body>
+</html>

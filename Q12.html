@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+  </head>
+  <body>
+    <pre>
+        An arrow function is a shorter syntax for writing functions in JavaScript.
+        It was introduced in ES6.
+        They have a cleaner & shorter syntax.
+        They do not have their own this, arguments, or super.
+        They are best suited for non-method functions, and they cannot be used as constructors.
+
+        <b>Syntax:</b>
+        const functionName = (parameters) => {
+          // function body
+        };
+    </pre>
+    <script>
+      const factorial = (n) => {
+        if (n < 0) return "Invalid input";
+        let result = 1;
+        for (let i = 2; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      };
+
+      const number = 5;
+      const fact = factorial(number);
+      console.log(`Factorial of ${number} is ${fact}`);
+    </script>
+  </body>
+</html>
